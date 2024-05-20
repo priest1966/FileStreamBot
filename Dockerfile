@@ -15,7 +15,7 @@ RUN pip install --upgrade pip \
 COPY . .
 
 # Expose port 8075
-EXPOSE 8075
+EXPOSE 443
 
 # Set the command to run the application
 CMD ["python", "-m", "FileStream"]
