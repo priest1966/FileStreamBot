@@ -1,0 +1,15 @@
+services:
+  # A Docker web service
+  - type: web
+    name: FileStreamBot
+    env: python
+    startCommand: python3 -m FileStream
+    buildCommand: pip install -r requirements.txt
+    repo: https://github.com/priest1966/FileStreamBot # optional
+    region: oregon # optional (defaults to oregon)
+    plan: free # optional (defaults to starter)
+    branch: main # optional (defaults to master)
+    numInstances: 1 # optional (defaults to 1)
+    healthCheckPath: /
+
+#End of yaml
